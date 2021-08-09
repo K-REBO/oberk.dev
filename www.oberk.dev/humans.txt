@@ -1,0 +1,20 @@
+I'm Bido auther of this site.
+
+Location: Japan
+
+this site has following contents
+https://oberk.dev: top page
+https://api.oberk.dev: my api endpoint
+https://labs.oberk.dev: demo, test, example page
+https://slide.oberk.dev: my slides
+
+In detail [https://raw.githubusercontent.com/K-REBO/oberk.dev/master/README.md]
+
+
+I'm on internet on..
+Github: K-REBO
+Zenn.dev: oberk
+
+thanks for visiting this site and reading this humans.txt.
+humans.txt(https://humanstxt.org/Standard.html)
+
