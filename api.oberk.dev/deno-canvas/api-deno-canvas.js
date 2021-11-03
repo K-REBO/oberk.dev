@@ -4,7 +4,7 @@ addEventListener("fetch", async (evt) => {
 
 	const screen = {height: 828,width: 1792,};
 
-	await init();
+	// await init();
 	const canvas = createCanvas(screen.height,screen.width);
 	const ctx = canvas.getContext("2d");
 
