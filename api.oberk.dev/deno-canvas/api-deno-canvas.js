@@ -1,13 +1,14 @@
-import { createCanvas } from "https://deno.land/x/canvas/mod.ts";
-
-
-const screen = {height: 828,width: 1792,};
-const canvas = createCanvas(screen.height,screen.width);
-const ctx = canvas.getContext("2d");
-
-const exam = new Date("2022/1/15");
+import { createCanvas, init } from "https://deno.land/x/canvas/mod.ts";
 
 addEventListener("fetch", async (evt) => {
+
+	const screen = {height: 828,width: 1792,};
+
+	await init();
+	const canvas = createCanvas(screen.height,screen.width);
+	const ctx = canvas.getContext("2d");
+
+	const exam = new Date("2022/1/15");
 
 	const font_size = 400;
 	ctx.fillStyle = "black";
@@ -24,5 +25,11 @@ addEventListener("fetch", async (evt) => {
 	ctx.fillStyle = "white";
 	ctx.fillText(`${day}`,screen.height/2 - Math.round(font_size/digit_length) - 50,screen.width * 4/5);
 
-	return new Response(canvas.toBuffer());  
+	evt.respondWith(
+		new Response(canvas.toBuffer(), {
+		  headers: {
+			"content-type": "image/png",
+		  },
+		})
+	);
 });
